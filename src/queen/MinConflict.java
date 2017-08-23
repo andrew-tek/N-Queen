@@ -64,8 +64,6 @@ public class MinConflict extends ChessBoard{
 		queensPosition.remove(queens[steepY].toString());
 		queens[steepY].setX(steepX);
 		queens[steepY].setY(steepY);
-		queensPosition.add(queens[steepY].toString());
-//		this.printBoard();
 		return this.checkConflicts();
 		
 	}
@@ -73,12 +71,10 @@ public class MinConflict extends ChessBoard{
 	@Override
 	boolean solve() {
 		minConflicts = conflictsOnBoard;
-//		System.out.println("CHECK HERE: " + conflictsOnBoard);
 		int maxAttempt = 100;
 		for (int i = 0; i < maxAttempt; i++) {
 			if (conflictsOnBoard == 0) {
-//				System.out.println("SUCCESS");
-//				printBoard();
+				printBoard();
 				return true;
 			}
 			Random random = new Random();
@@ -87,7 +83,6 @@ public class MinConflict extends ChessBoard{
 				selection = random.nextInt(SIZE_OF_BOARD);
 			calculateMoves(selection);
 		}
-//		System.out.println("FAILURE");
 		return false;
 		
 		

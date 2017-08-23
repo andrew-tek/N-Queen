@@ -36,6 +36,7 @@ public class Queen {
 	public void setQueensAttacking(int queensAttacking) {
 		this.queensAttacking = queensAttacking;
 	}
+	//Will return value of x concatenated with value of y with 2 characters each
 	@Override
 	public String toString() {
 		String x = "";

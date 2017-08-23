@@ -18,7 +18,6 @@ abstract  class ChessBoard {
 		conflictsOnBoard = 0;
 	}
 	public ChessBoard (ChessBoard chessBoard) {
-//			 this.queens = chessBoard.queens.clone();
 			queens = new Queen [SIZE_OF_BOARD];
 			 for (int i = 0; i < queens.length; i++) {
 				 this.queens[i] = new Queen(chessBoard.queens[i]);
@@ -50,7 +49,6 @@ abstract  class ChessBoard {
 					queens[i].setQueensAttacking(queens[i].getQueensAttacking() + 1);
 				}
 			}
-//			System.out.println(queens[i].toString() + ": " + queens[i].getQueensAttacking());
 		}
 		conflictsOnBoard = conflicts;
 		return conflicts;
@@ -87,7 +85,6 @@ abstract  class ChessBoard {
 			}
 			System.out.println();
 		}
-		System.out.println(" HOW MANY Q's " + qString);
 	}
 	public void printQueens() {
 		for (int i = 0; i < queens.length; i++) {

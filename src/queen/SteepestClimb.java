@@ -32,13 +32,11 @@ public class SteepestClimb extends ChessBoard {
 	}
 	@Override
 	public boolean solve() {
-		
 		int tempMinConflicts = minConflicts;
 		this.calculateMoves();
 		while (tempMinConflicts > minConflicts || tempMinConflicts == 0 ) {
 			if (tempMinConflicts == 0) {
-//				printBoard();
-//				System.out.println("GOT IT");
+				printBoard();
 				return true;
 			}
 			
@@ -46,7 +44,6 @@ public class SteepestClimb extends ChessBoard {
 			this.calculateMoves();
 		}
 	
-		
 		return false;
 	}
 	public int calculateMoves() {
